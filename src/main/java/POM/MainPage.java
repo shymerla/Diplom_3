@@ -60,7 +60,7 @@ public class MainPage {
 
     // сохраняем в переменную класс, который есть только у выбранного таба
     @FindBy(how = How.CSS,using = ".tab_tab_type_current__2BEPc")
-    public SelenideElement currentActiveSection;
+    private SelenideElement currentActiveSection;
 
     @Step("вытаскиваем текст активного таба (Начинки)")
     public boolean isFillingsTabActive() {

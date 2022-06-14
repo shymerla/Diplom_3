@@ -32,14 +32,17 @@ public class RegistrationPage {
     @FindBy(how = How.CSS, using = ".Auth_link__1fOlj")
     private SelenideElement registrationPageEnterButton;
 
+    @Step("Сообщение о коротком пароле")
     public String getTooShortPasswordErrorMessage() {
         return incorrectShortPasswordErrorMessage.getText();
     }
 
+    @Step("Скрол до кноки войти")
     public void scrollToRegistrationPageEnterButton() {
         registrationPageEnterButton.scrollTo();
     }
 
+    @Step("Клик на копку Войти")
     public void clickRegistrationPageEnterButton() {
         registrationPageEnterButton.click();
     }

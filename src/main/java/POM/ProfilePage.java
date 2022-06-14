@@ -2,6 +2,7 @@ package POM;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
@@ -23,22 +24,27 @@ public class ProfilePage {
     @FindBy(how = How.XPATH, using = "//a[text()='Профиль']")
     private SelenideElement profileButton;
 
+    @Step("Нажатие кноки Конструктор")
     public void clickConstructorButton() {
         constructorButton.click();
     }
 
+    @Step("Нажатие лого Stellar Burger")
     public void clickStellarBurgerHeaderLogo() {
         headerLogo.click();
     }
 
+    @Step("Видимость кнопки Профиль")
     public boolean isProfileButtonDisplayed() {
         return profileButton.shouldBe(Condition.exist).isDisplayed();
     }
 
+    @Step("Видимость кнопки Выход")
     public boolean isExitButtonDisplayed() {
         return exitButton.shouldBe(Condition.exist).isDisplayed();
     }
 
+    @Step("Нажатие кнопки Выход")
     public void clickExitButton() {
         exitButton.click();
     }
